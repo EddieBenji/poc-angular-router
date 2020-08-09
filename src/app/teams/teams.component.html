@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row" *ngIf="teams$|async as teams">
+        <div class="col-6">
+            <ul class="list-group">
+                <li *ngFor="let team of teams"
+                    class="list-group-item"
+                    routerLinkActive="active">
+                    <a [routerLink]="[team.team_id, 'players']">{{team.name}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-6">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>
