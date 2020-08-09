@@ -1,6 +1,7 @@
 <div class="container">
     <div class="row" *ngIf="teams$|async as teams">
         <div class="col-6">
+            <p>Teams</p>
             <ul class="list-group">
                 <li *ngFor="let team of teams"
                     class="list-group-item"
