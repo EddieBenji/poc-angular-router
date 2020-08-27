@@ -32,21 +32,4 @@ export class PlayerService {
               return response.api.players;
           }));
     }
-
-    // public getPlayers(teamId: number): Observable<Player[]> {
-    //     return of([
-    //         {
-    //             number: '1',
-    //             player: 'Alisson'
-    //         },
-    //         {
-    //             number: '4',
-    //             player: 'V. van Dijk'
-    //         },
-    //         {
-    //             number: '26',
-    //             player: 'A. Robertson'
-    //         },
-    //     ]);
-    // }
 }

@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Player, PlayerService } from '../player.service';
@@ -13,8 +12,7 @@ export class PlayersComponent implements OnInit, OnDestroy {
     private unSubscribe$ = new Subject<void>();
     players$ = new Observable<Player[]>();
 
-    constructor(private route: ActivatedRoute,
-                private playerService: PlayerService) {
+    constructor(private playerService: PlayerService) {
     }
 
     ngOnInit(): void {
@@ -29,5 +27,4 @@ export class PlayersComponent implements OnInit, OnDestroy {
         this.unSubscribe$.next();
         this.unSubscribe$.complete();
     }
-
 }
